@@ -8,4 +8,4 @@ Start the server from scratch
 ```
 sudo ./start.sh
 ```
-Enter your admin password, enjoy
+Enter your admin password, application will be run at http://laravel.test once done 
