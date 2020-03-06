@@ -13,7 +13,7 @@ class BuyingTransactionTable extends Migration
      */
     public function up()
     {
-        Schema::createIfNotExists('buying_transaction', function (Blueprint $table) {
+        Schema::create('buying_transaction', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('wager_id');
             $table->foreign('wager_id')->references('id')->on('wager');
