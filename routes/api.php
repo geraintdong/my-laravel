@@ -18,7 +18,8 @@ use Illuminate\Http\Request;
 //});
 
 Route::resource('wagers', 'Api\WagersController')->only([
-    'index'
+    'index',
+    'store'
 ]);
 
 Route::post('buy/{wagerId}', 'Api\WagersController@buy');

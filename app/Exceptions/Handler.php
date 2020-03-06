@@ -54,7 +54,7 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception)
     {
         if ($exception instanceof ValidationException) {
-            return response()->json($exception->errors(), Response::HTTP_BAD_REQUEST);
+            return response()->json(['error' => $exception->errors()], Response::HTTP_BAD_REQUEST);
         }
         if ($exception instanceof NotFoundHttpException) {
             return response()->json(

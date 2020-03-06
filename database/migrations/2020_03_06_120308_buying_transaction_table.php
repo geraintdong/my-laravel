@@ -15,7 +15,7 @@ class BuyingTransactionTable extends Migration
     {
         Schema::create('buying_transaction', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('wager_id');
+            $table->unsignedBigInteger('wager_id');
             $table->foreign('wager_id')->references('id')->on('wager');
             $table->decimal('buying_price', 14, 2);
             $table->timestamps();
